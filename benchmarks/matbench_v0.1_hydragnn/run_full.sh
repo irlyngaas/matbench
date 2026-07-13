@@ -2,8 +2,7 @@ epochs=(100 10)
 
 num=0
 tasks=""
-#for task in "jdft2d" "mp_is_metal"; do
-for task in "jdft2d"; do
+for task in "jdft2d" "mp_is_metal"; do
   bash preprocess_matbench.sh $task
   bash finetune.sh $task ${epochs[num]}
   let num++
